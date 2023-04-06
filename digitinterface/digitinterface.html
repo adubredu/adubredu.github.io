@@ -52,17 +52,17 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface"><code class="docutils literal notranslate"><span class="pre">DigitInterface</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.bow"><code class="docutils literal notranslate"><span class="pre">DigitInterface.bow()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.close_gripper"><code class="docutils literal notranslate"><span class="pre">DigitInterface.close_gripper()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.get_wrist_pose"><code class="docutils literal notranslate"><span class="pre">DigitInterface.get_wrist_pose()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.move_at_velocity"><code class="docutils literal notranslate"><span class="pre">DigitInterface.move_at_velocity()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.move_both_arms_sequentially_to_pose"><code class="docutils literal notranslate"><span class="pre">DigitInterface.move_both_arms_sequentially_to_pose()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.move_both_arms_to_pose"><code class="docutils literal notranslate"><span class="pre">DigitInterface.move_both_arms_to_pose()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.move_both_wrists_to_pose"><code class="docutils literal notranslate"><span class="pre">DigitInterface.move_both_wrists_to_pose()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.move_to_waypoint"><code class="docutils literal notranslate"><span class="pre">DigitInterface.move_to_waypoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.move_torso_to_pose"><code class="docutils literal notranslate"><span class="pre">DigitInterface.move_torso_to_pose()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.move_wrist_to_pose"><code class="docutils literal notranslate"><span class="pre">DigitInterface.move_wrist_to_pose()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.open_gripper"><code class="docutils literal notranslate"><span class="pre">DigitInterface.open_gripper()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.squat"><code class="docutils literal notranslate"><span class="pre">DigitInterface.squat()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.torso_spin"><code class="docutils literal notranslate"><span class="pre">DigitInterface.torso_spin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.perform_actions_concurrently"><code class="docutils literal notranslate"><span class="pre">DigitInterface.perform_actions_concurrently()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#digitinterface.digitinterface.DigitInterface.perform_actions_sequentially"><code class="docutils literal notranslate"><span class="pre">DigitInterface.perform_actions_sequentially()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -152,12 +152,6 @@ to request command privilege for the user.</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">digitinterface.digitinterface.</span></span><span class="sig-name descname"><span class="pre">DigitInterface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
-<dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.bow">
-<span class="sig-name descname"><span class="pre">bow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.bow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.bow" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.close_gripper">
 <span class="sig-name descname"><span class="pre">close_gripper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">armname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.close_gripper"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.close_gripper" title="Permalink to this definition"></a></dt>
 <dd><p>This is a docstring for the some_method method.</p>
@@ -165,38 +159,164 @@ to request command privilege for the user.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.get_wrist_pose">
-<span class="sig-name descname"><span class="pre">get_wrist_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">armname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.get_wrist_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.get_wrist_pose" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
+<span class="sig-name descname"><span class="pre">get_wrist_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">armname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'base'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.get_wrist_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.get_wrist_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the pose rpyxyz of the wrist of Digit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>armname</strong> (<em>string</em>) – “left” or “right”</p></li>
+<li><p><strong>reference_frame</strong> (<em>string</em>) – Frame of reference of the wrist pose.
+The default is “base” which is the pelvis of Digit.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The pose of the wrist in a python List formatted as
+[roll pitch yaw x y z]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Float64}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.move_at_velocity">
-<span class="sig-name descname"><span class="pre">move_at_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_at_velocity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_at_velocity" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
+<span class="sig-name descname"><span class="pre">move_at_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avoid_obstacles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obstacle_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_at_velocity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_at_velocity" title="Permalink to this definition"></a></dt>
+<dd><p>Commands the robot to move at a desired velocity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>waypoint</strong> (<em>List{float}</em>) – spatial velocity of the robot’s base in
+a python List formatted as [yaw_velocity, vx, vy]</p></li>
+<li><p><strong>execute</strong> (<em>bool</em>) – Whether or not to execute this action</p></li>
+<li><p><strong>execute</strong> – Whether or not to execute this action</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON message command in Python syntax</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Dict}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.move_both_arms_sequentially_to_pose">
-<span class="sig-name descname"><span class="pre">move_both_arms_sequentially_to_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">armname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prevarmname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prevarmpose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_both_arms_sequentially_to_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_both_arms_sequentially_to_pose" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
+<span class="sig-name descname"><span class="pre">move_both_arms_sequentially_to_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">armname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prevarmname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prevarmpose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_both_arms_sequentially_to_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_both_arms_sequentially_to_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Maintains the pose of one wrist as the other wrist moves to a
+specified pose</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose</strong> (<em>List{float}</em>) – The desired pose of the target wrist in a python List formatted as
+[roll pitch yaw x y z]</p></li>
+<li><p><strong>armname</strong> (<em>string</em>) – “left” or “right”. The name of the target wrist</p></li>
+<li><p><strong>prevarmname</strong> (<em>string</em>) – “left” or “right”. The name of the other arm</p></li>
+<li><p><strong>prevarmpose</strong> (<em>List{float}</em>) – The pose at which to maintain the other arm in a python List formatted as
+[roll pitch yaw x y z]</p></li>
+<li><p><strong>duration</strong> (<em>float</em>) – The desired duration of the entire motion in seconds.</p></li>
+<li><p><strong>execute</strong> (<em>bool</em>) – Whether or not to execute this action</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON message command in Python syntax</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Dict}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.move_both_arms_to_pose">
-<span class="sig-name descname"><span class="pre">move_both_arms_to_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lpose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_both_arms_to_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_both_arms_to_pose" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
+<dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.move_both_wrists_to_pose">
+<span class="sig-name descname"><span class="pre">move_both_wrists_to_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lpose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rpose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_both_wrists_to_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_both_wrists_to_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Moves both wrists concurrently to the specified poses</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lpose</strong> (<em>List{float}</em>) – The desired pose of the left wrist in a python List formatted as
+[roll pitch yaw x y z]</p></li>
+<li><p><strong>rpose</strong> (<em>List{float}</em>) – The desired pose of the right wrist in a python List formatted as
+[roll pitch yaw x y z]</p></li>
+<li><p><strong>duration</strong> (<em>float</em>) – The desired duration of the entire motion in seconds.</p></li>
+<li><p><strong>execute</strong> (<em>bool</em>) – Whether or not to execute this action</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON message command in Python syntax</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Dict}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.move_to_waypoint">
-<span class="sig-name descname"><span class="pre">move_to_waypoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waypoint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_to_waypoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_to_waypoint" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
+<span class="sig-name descname"><span class="pre">move_to_waypoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">waypoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avoid_obstacles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obstacle_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'world'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_to_waypoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_to_waypoint" title="Permalink to this definition"></a></dt>
+<dd><p>Commands the robot to move to a desired waypoint</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>waypoint</strong> (<em>List{float}</em>) – target waypoint to walk to in the specified reference frame
+in a python List formatted as [yaw, x, y]</p></li>
+<li><p><strong>execute</strong> (<em>bool</em>) – Whether or not to execute this action</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON message command in Python syntax</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Dict}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.move_torso_to_pose">
+<span class="sig-name descname"><span class="pre">move_torso_to_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_torso_to_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_torso_to_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Commands the torso to move to a specified position and
+orientation relative to the center of the robot’s support polygon</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose</strong> (<em>List{float}</em>) – The desired pose of the torso in a python List formatted as
+[roll pitch yaw x y z]</p></li>
+<li><p><strong>duration</strong> (<em>float</em>) – The desired duration of the entire motion in seconds.</p></li>
+<li><p><strong>execute</strong> (<em>bool</em>) – Whether or not to execute this action</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON message command in Python syntax</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Dict}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.move_wrist_to_pose">
-<span class="sig-name descname"><span class="pre">move_wrist_to_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">armname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_wrist_to_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_wrist_to_pose" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
+<span class="sig-name descname"><span class="pre">move_wrist_to_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">armname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.move_wrist_to_pose"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.move_wrist_to_pose" title="Permalink to this definition"></a></dt>
+<dd><p>Moves the specified wrist to the specified pose</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pose</strong> (<em>List{float}</em>) – The desired pose of the wrist in a python List formatted as
+[roll pitch yaw x y z]</p></li>
+<li><p><strong>armname</strong> (<em>string</em>) – “left” or “right”</p></li>
+<li><p><strong>duration</strong> (<em>float</em>) – The desired duration of the entire motion in seconds.</p></li>
+<li><p><strong>execute</strong> (<em>bool</em>) – Whether or not to execute this action</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON message command in Python syntax</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Dict}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -206,15 +326,43 @@ to request command privilege for the user.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.squat">
-<span class="sig-name descname"><span class="pre">squat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.squat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.squat" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
+<dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.perform_actions_concurrently">
+<span class="sig-name descname"><span class="pre">perform_actions_concurrently</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.perform_actions_concurrently"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.perform_actions_concurrently" title="Permalink to this definition"></a></dt>
+<dd><p>Execute a list of actions simultaneously</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actions</strong> (<em>List{List{Dict}}</em>) – A list of JSON message commands in Python syntax</p></li>
+<li><p><strong>execute</strong> (<em>bool</em>) – Whether or not to execute this action</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON message command in Python syntax</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Dict}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.torso_spin">
-<span class="sig-name descname"><span class="pre">torso_spin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.torso_spin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.torso_spin" title="Permalink to this definition"></a></dt>
-<dd><p>This is a docstring for the some_method method.</p>
+<dt class="sig sig-object py" id="digitinterface.digitinterface.DigitInterface.perform_actions_sequentially">
+<span class="sig-name descname"><span class="pre">perform_actions_sequentially</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">execute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/digitinterface/digitinterface.html#DigitInterface.perform_actions_sequentially"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#digitinterface.digitinterface.DigitInterface.perform_actions_sequentially" title="Permalink to this definition"></a></dt>
+<dd><p>Execute a list of actions sequentially</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actions</strong> (<em>List{List{Dict}}</em>) – A list of JSON message commands in Python syntax</p></li>
+<li><p><strong>execute</strong> (<em>bool</em>) – Whether or not to execute this action</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON message command in Python syntax</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List{Dict}</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
